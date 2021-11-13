@@ -110,5 +110,5 @@ local function on_query(name, params, mode)
 end
 
 async(function()
-  vRP.registerDBDriver("ghmattimysql", on_init, on_prepare, on_query)
+  vRP.registerDBDriver("oxmysql", on_init, on_prepare, on_query)
 end)
