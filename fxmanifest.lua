@@ -5,7 +5,7 @@ description "A middleware for FiveM servers with vRPEX framework, a trial versio
 
 dependencies{
   "vrp",
-  "ghmattimysql"
+  "oxmysql"
 }
 
 -- server scripts
