@@ -1,6 +1,12 @@
 # combo_ghmatti
 A middleware for FiveM servers with vRPEX framework, a trial version aimed at vRP.
 
+• [Differentials](https://github.com/combo0001/combo_oxmysql#differentials)
+• [Scripts requireds](https://github.com/combo0001/combo_oxmysql#scripts-requireds)
+• [Installation](https://github.com/combo0001/combo_oxmysql#scripts-requireds)
+• [About GHMattiMySQL.dll](https://github.com/combo0001/combo_oxmysql#necessary-modifications-to-work-if-you-left-ghmattimysql-made-in-c-dll)
+• [ImagicTheCat](https://github.com/combo0001/combo_oxmysql#necessary-modifications-to-work-if-you-left-ghmattimysql-made-in-c-dll)
+
 ## Differentials
 ### > Supports multiple queries (using ";")
 ### > If you have a condition in your query (which uses ";" without being a multiple query), and you want to do a multiple query, it needs to be the first query used in prepare.
