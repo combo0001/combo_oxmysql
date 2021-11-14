@@ -1,10 +1,16 @@
-# combo_ghmatti
+# combo_oxmysql
 A middleware for FiveM servers with vRPEX framework, a trial version aimed at vRP.
 
+## Features
+
 • [Differentials](https://github.com/combo0001/combo_oxmysql#differentials)
+
 • [Scripts requireds](https://github.com/combo0001/combo_oxmysql#scripts-requireds)
+
 • [Installation](https://github.com/combo0001/combo_oxmysql#scripts-requireds)
+
 • [About GHMattiMySQL.dll](https://github.com/combo0001/combo_oxmysql#necessary-modifications-to-work-if-you-left-ghmattimysql-made-in-c-dll)
+
 • [ImagicTheCat](https://github.com/combo0001/combo_oxmysql#necessary-modifications-to-work-if-you-left-ghmattimysql-made-in-c-dll)
 
 ## Differentials
