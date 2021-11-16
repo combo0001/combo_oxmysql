@@ -62,12 +62,14 @@ local function on_query(name, params, mode)
         table.concat(splited or {}, query:sub(query:last('IF;') + 1):split(';') or {})
         local responses = {}
         for k,v in next, splited do 
+            if type(v) ~= 'string' or not v:match("%w") then goto continue end 
             local p = async()
             driver:execute(v, _params, function(data)
                 local data = data or {}
                 p(data.affectedRows or 0)
             end)
             table.insert(responses, p:wait())
+            ::continue::
         end
         r(table.unpack(responses))
     elseif mode == "scalar" then
@@ -84,6 +86,7 @@ local function on_query(name, params, mode)
         local responses = {}
         local lastInsert = {}
         for k,v in next, splited do 
+            if type(v) ~= 'string' or not v:match("%w") then goto continue end 
             local p = async()
             local s,l = v:lower():find('last_insert_id()')
             if s and l then 
@@ -111,6 +114,7 @@ local function on_query(name, params, mode)
                 end
             end)
             table.insert(responses, p:wait())
+            ::continue::
         end
         r(table.unpack(responses))
     end
