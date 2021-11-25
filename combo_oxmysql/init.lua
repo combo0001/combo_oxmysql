@@ -48,6 +48,10 @@ end
 
 local function on_query(name, params, mode)
     local query = queries[name]
+    if type(query) ~= 'string' then
+        print('^1Prepare inexistent ('..tostring(name)..').^0') 
+        return 
+    end
     local _params = {_ = true}
     for k,v in pairs(params) do 
         _params[k] = v 
