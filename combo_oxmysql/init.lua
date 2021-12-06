@@ -12,11 +12,13 @@ local function blob2string(blob)
 end
 
 local function getTableToResult(result)
-    for i in next, result do 
-        if type(result[i]) == 'table' then 
-            for k in next, result[i] do 
-                if type(result[i][k]) == 'table' then 
-                    return table.unpack(result)
+    if type(result) == 'table' then 
+        for i in next, result do 
+            if type(result[i]) == 'table' then 
+                for k in next, result[i] do 
+                    if type(result[i][k]) == 'table' then 
+                        return table.unpack(result)
+                    end
                 end
             end
         end
