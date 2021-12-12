@@ -3,6 +3,8 @@ A middleware for FiveM servers with vRPEX framework, a trial version aimed at vR
 
 ## Features
 
+• [Enable multiqueries](https://github.com/combo0001/combo_oxmysql#enable-multiples-queries)
+
 • [Differentials](https://github.com/combo0001/combo_oxmysql#differentials)
 
 • [Scripts requireds](https://github.com/combo0001/combo_oxmysql#scripts-requireds)
@@ -12,6 +14,17 @@ A middleware for FiveM servers with vRPEX framework, a trial version aimed at vR
 • [About GHMattiMySQL.dll](https://github.com/combo0001/combo_oxmysql#necessary-modifications-to-work-if-you-left-ghmattimysql-made-in-c-dll)
 
 • [ImagicTheCat](https://github.com/combo0001/combo_oxmysql#necessary-modifications-to-work-if-you-left-ghmattimysql-made-in-c-dll)
+
+## Enable multiples queries
+### > I read the oxmysql code and found that they set the mysql2 connection setup by literally splitting the connection string into ";" and "=" to assemble the object that will follow some standard connection attributes
+### > Following this logic, it is only necessary to add a ";" to the end of the connection string and add the parameter for multiple mysql2 queries
+### > Follow the example below: 
+```cfg
+# Before: 
+set mysql_connection_string "username=root;password=;database=vrpex;host=127.0.0.1"
+# After: 
+set mysql_connection_string "username=root;password=;database=vrpex;host=127.0.0.1;multipleStatements=true"
+```
 
 ## Differentials
 ### > Supports multiple queries (using ";")
