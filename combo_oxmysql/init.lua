@@ -50,7 +50,7 @@ local function on_query(name, params, mode)
     end
     local r = promise.new()
     if mode == "execute" then
-        driver:execute(query, _params, function(data)
+        driver:query(query, _params, function(data)
             local data = data or {}
             r:resolve(data.affectedRows or 0)
         end)
@@ -59,7 +59,7 @@ local function on_query(name, params, mode)
             r:resolve(scalar)
         end)
     else
-        driver:execute(query, _params, function(rows)
+        driver:query(query, _params, function(rows)
             r:resolve(rows)
         end)
     end
